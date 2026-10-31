@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Didsbury, Stalybridge &amp; Alderley Eyecare | Independent Opticians</title>
+<meta name="description" content="Three independent opticians in Didsbury, Stalybridge and Alderley Edge. Thorough eye examinations, children's eye care from age two and designer frames with Carl Zeiss lenses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brown:#533000;
+    --mint:#D3EBDB;
+    --mint-deep:#A8D6B8;
+    --mint-soft:#E8F4EC;
+    --ink:#22160A;
+    --charcoal:#4A4038;
+    --muted:#6A635B;
+    --cream:#F5F3EC;
+    --paper:#FFFEFA;
+    --line:rgba(34,22,10,.12);
+    --radius:28px;
+    --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --serif:"Instrument Serif",Georgia,serif;
+    --wrap:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  em,.serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+  h1,h2,h3{font-weight:700;letter-spacing:-.035em;line-height:1.02}
+  h2{font-size:clamp(38px,5.4vw,72px)}
+  h2 em{font-size:1.08em}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--charcoal)}
+  .eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--brown);box-shadow:0 0 0 4px var(--mint)}
+  .lead{font-size:clamp(17px,1.4vw,19px);color:var(--muted);max-width:56ch}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;gap:14px;padding:8px 8px 8px 24px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .25s ease, background .25s ease, color .25s ease}
+  .btn .arrow{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:hover .arrow{transform:rotate(-45deg)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark .arrow{background:var(--mint);color:var(--ink)}
+  .btn-mint{background:var(--mint);color:var(--ink)}
+  .btn-mint .arrow{background:var(--ink);color:var(--mint)}
+  .btn-ghost{padding:14px 24px;border:1.5px solid var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+  .btn-light{background:#fff;color:var(--ink)}
+  .btn-light .arrow{background:var(--brown);color:var(--mint)}
+  .btn-sm{padding:11px 18px;font-size:14px}
+
+  /* Top bar */
+  .topbar{background:var(--ink);color:#e6e1d6;font-size:13px}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:10px;padding-bottom:10px}
+  .topbar .phones{display:flex;gap:26px}
+  .topbar b{color:var(--mint);font-weight:700}
+  .topbar a:hover{color:var(--mint)}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:50;background:rgba(245,243,236,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s, background .3s}
+  header.site.scrolled{border-color:var(--line);background:rgba(245,243,236,.95)}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;transition:height .3s}
+  header.site.scrolled .wrap{height:70px}
+  .logo{display:flex;align-items:center;gap:12px;color:var(--brown)}
+  .logo svg{width:52px;height:auto;flex:none}
+  .logo .word{display:flex;flex-direction:column;line-height:1}
+  .logo small{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--charcoal)}
+  .logo b{font-size:27px;font-weight:800;letter-spacing:-.04em;color:var(--ink);margin-top:3px}
+  .logo b em{color:var(--brown);font-size:1.1em}
+  nav.main{display:flex;align-items:center;gap:34px;font-weight:600;font-size:15px}
+  nav.main a.link{position:relative}
+  nav.main a.link::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:2px;background:var(--brown);transform:scaleX(0);transform-origin:right;transition:transform .3s}
+  nav.main a.link:hover::after{transform:scaleX(1);transform-origin:left}
+  .menu-toggle{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+  .menu-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px auto;transition:.3s}
+
+  /* Hero */
+  .hero{padding:56px 0 96px}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(44px,5.2vw,76px);margin:22px 0 26px}
+  .hero h1 em{color:var(--brown);position:relative;font-size:1.06em}
+  .hero h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.1em;height:.26em;background:var(--mint-deep);z-index:-1;border-radius:4px;transform:scaleX(0);transform-origin:left;animation:underline 1s .6s cubic-bezier(.2,.8,.2,1) forwards}
+  @keyframes underline{to{transform:scaleX(1)}}
+  .hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .hero .trust{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);font-size:14px;font-weight:600;color:var(--charcoal)}
+  .hero .trust span{display:flex;align-items:center;gap:8px}
+  .hero .trust svg{flex:none;color:var(--brown)}
+  .collage{position:relative;aspect-ratio:1/1.02}
+  .collage .ph{position:absolute;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(34,22,10,.5);aspect-ratio:3/2;display:block}
+  .collage .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .collage .ph:hover img{transform:scale(1.05)}
+  .collage .a{left:0;top:0;width:80%}
+  .collage .a img{transform:scale(1.12);animation:heroZoom 2.2s cubic-bezier(.2,.8,.2,1) forwards}
+  .collage .a:hover img{animation:none;transform:scale(1.05)}
+  @keyframes heroZoom{to{transform:scale(1)}}
+  .collage .b{right:0;top:40%;width:58%;border:6px solid var(--cream)}
+  .collage .c{left:6%;bottom:0;width:54%;border:6px solid var(--cream)}
+  .collage .label{position:absolute;left:12px;bottom:12px;background:var(--paper);color:var(--ink);font-size:13px;font-weight:800;padding:6px 12px;border-radius:999px;display:flex;align-items:center;gap:6px}
+  .collage .label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brown)}
+  .collage .b .label{top:12px;bottom:auto}
+  .badge{position:absolute;right:30px;bottom:-6px;width:150px;height:150px;border-radius:50%;background:var(--ink);display:grid;place-items:center;box-shadow:0 18px 40px -16px rgba(34,22,10,.55);z-index:3}
+  .badge svg.ring{position:absolute;inset:0;animation:spin 20s linear infinite}
+  .badge .mk{width:66px;height:auto;color:var(--mint)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .float-card{position:absolute;right:-14px;top:-18px;background:var(--paper);border-radius:20px;padding:16px 20px;box-shadow:0 20px 40px -20px rgba(34,22,10,.45);display:flex;align-items:center;gap:14px;animation:bob 5s ease-in-out infinite;z-index:3}
+  .float-card .num{font-size:34px;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--brown)}
+  .float-card small{display:block;font-size:13px;color:var(--muted);line-height:1.3;font-weight:600}
+  @keyframes bob{50%{transform:translateY(-10px)}}
+
+  /* Marquee */
+  .marquee{background:var(--mint);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);overflow:hidden;padding:22px 0;transform:rotate(-1.2deg);margin:0 -20px;position:relative;z-index:2}
+  .marquee-track{display:flex;width:max-content;animation:marquee 46s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-group{display:flex;align-items:center;flex:none}
+  .marquee-item{display:flex;align-items:center;gap:36px;padding-right:36px;font-size:clamp(26px,3vw,40px);font-weight:700;letter-spacing:-.03em;white-space:nowrap}
+  .marquee-item em{font-size:1.1em}
+  .marquee-item .star{width:28px;height:28px;flex:none}
+  @keyframes marquee{to{transform:translateX(-50%)}}
+
+  /* Section rhythm */
+  section{position:relative}
+  .pad{padding:120px 0}
+  .section-head{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;margin-bottom:64px}
+  .section-head h2{margin-top:18px}
+
+  /* Practices */
+  .practices .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .practice{border-radius:var(--radius);overflow:hidden;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s}
+  .practice:hover{transform:translateY(-8px);box-shadow:0 30px 50px -30px rgba(34,22,10,.4)}
+  .practice .top{position:relative;aspect-ratio:3/2;overflow:hidden;display:block}
+  .practice .top img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .practice:hover .top img{transform:scale(1.06)}
+  .practice .num{position:absolute;right:16px;top:16px;width:44px;height:44px;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--brown)}
+  .practice .body{padding:30px 30px 32px;display:flex;flex-direction:column;gap:16px;flex:1}
+  .practice .city{align-self:flex-start;background:var(--mint);color:var(--ink);font-weight:800;padding:6px 14px;border-radius:999px;font-size:13px;letter-spacing:.02em}
+  .practice h3{font-size:34px}
+  .practice h3 em{color:var(--brown)}
+  .practice .details{display:grid;gap:10px;font-size:15px;color:var(--charcoal);padding-top:16px;border-top:1px dashed var(--line)}
+  .practice .details div{display:flex;gap:12px;align-items:flex-start}
+  .practice .details svg{flex:none;margin-top:3px;color:var(--brown)}
+  .practice .details a{font-weight:700;color:var(--ink)}
+  .practice .details a:hover{color:var(--brown)}
+  .practice .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .practice .tags span{font-size:12px;font-weight:700;color:var(--charcoal);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+  .practice .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px}
+
+  /* Stats */
+  .stats{background:var(--ink);color:#fff}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat{padding:64px 28px;border-left:1px solid rgba(255,255,255,.12)}
+  .stat:first-child{border-left:0;padding-left:0}
+  .stat .n{font-size:clamp(52px,6vw,84px);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--mint)}
+  .stat .n sup{font-size:.45em;vertical-align:top;position:relative;top:.25em;margin-left:2px}
+  .stat p{margin-top:14px;color:#c9c3b8;font-size:15px;max-width:24ch}
+
+  /* Eye care */
+  .care{background:var(--ink);color:#fff;border-radius:44px;margin:0 16px;overflow:hidden}
+  .care .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .care .eyebrow{color:#d9d3c7}
+  .care .eyebrow::before{background:var(--mint);box-shadow:0 0 0 4px rgba(211,235,219,.2)}
+  .care h2{margin:18px 0 22px}
+  .care h2 em{color:var(--mint);white-space:nowrap}
+  .care .lead{color:#bfb8ab}
+  .care-list{margin-top:40px;display:grid;gap:4px}
+  .care-row{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;border-top:1px solid rgba(255,255,255,.12)}
+  .care-row .ico{width:56px;height:56px;border-radius:16px;background:rgba(211,235,219,.12);display:grid;place-items:center;color:var(--mint)}
+  .care-row h3{font-size:22px;letter-spacing:-.02em;margin-bottom:6px}
+  .care-row p{color:#bfb8ab;font-size:15px}
+  .care-row p b{color:#fff;font-weight:600}
+  .care .extras{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .care .extras span{font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:#e6e1d6}
+  .care .more{margin-top:30px}
+  .care .media{position:sticky;top:110px;align-self:start;height:560px}
+  .care .media img{position:absolute;border-radius:24px;object-fit:cover}
+  .care .media .a{left:0;top:0;width:86%;height:66%;object-position:55% 50%}
+  .care .media .b{right:0;bottom:0;width:60%;height:46%;border:6px solid var(--ink);object-position:80% 50%}
+
+  /* Frames gallery */
+  .gallery{overflow:hidden}
+  .gallery-track{display:flex;gap:20px;width:max-content;animation:marquee 50s linear infinite reverse}
+  .gallery:hover .gallery-track{animation-play-state:paused}
+  .gallery-track figure{width:340px;height:400px;border-radius:24px;overflow:hidden;flex:none}
+  .gallery-track figure:nth-child(even){height:340px;margin-top:60px}
+  .gallery-track img{width:100%;height:100%;object-fit:cover}
+  .cats{display:flex;flex-wrap:wrap;gap:12px;margin-top:56px}
+  .cats a{display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:12px 20px;font-weight:700;font-size:15px;transition:background .25s, transform .25s}
+  .cats a:hover{background:var(--mint);transform:translateY(-2px)}
+
+  /* Story */
+  .story .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
+  .story .photo{position:relative}
+  .story .photo .main{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3}
+  .story .photo .main img{width:100%;height:100%;object-fit:cover;object-position:35% 50%}
+  .story .photo .tag{position:absolute;right:-22px;bottom:-30px;background:var(--mint);border-radius:20px;padding:20px 24px;max-width:250px;font-weight:700;line-height:1.3;box-shadow:0 18px 40px -18px rgba(34,22,10,.45)}
+  .story .photo .tag em{display:block;font-size:30px;line-height:1;color:var(--brown)}
+  .story h2{margin:18px 0 28px}
+  .story h2 em{color:var(--brown)}
+  .story p{color:var(--muted);margin-bottom:18px;font-size:17px}
+  .story .sig{display:flex;align-items:center;gap:16px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+  .story .sig .mk{width:52px;height:52px;border-radius:50%;background:var(--mint);display:grid;place-items:center;color:var(--brown)}
+  .story .sig .mk svg{width:32px;height:auto}
+  .story .sig b{display:block}
+  .story .sig span{font-size:14px;color:var(--muted)}
+
+  /* Reviews */
+  .reviews .panel{background:var(--brown);color:#fff;border-radius:44px;padding:72px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+  .reviews .panel::after{content:"";position:absolute;right:-140px;top:-140px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(211,235,219,.1)}
+  .reviews h2{margin:18px 0 20px}
+  .reviews h2 em{color:var(--mint)}
+  .reviews .eyebrow{color:#eadfd2}
+  .reviews .eyebrow::before{background:var(--mint);box-shadow:0 0 0 4px rgba(211,235,219,.2)}
+  .reviews .lead{color:#e3d6c6}
+  .reviews .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .reviews .links a{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:11px 18px;border-radius:999px;font-weight:700;font-size:14px;transition:background .25s, color .25s}
+  .reviews .links a:hover{background:var(--mint);color:var(--ink)}
+  .g-card{background:#fff;color:var(--ink);border-radius:24px;padding:30px;position:relative;z-index:1;box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+  .g-card .row{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+  .stars{display:flex;gap:4px;color:#f5b400}
+  .g-card p{font-size:15px;color:var(--muted)}
+  .g-card .live{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1a7f37;display:flex;align-items:center;gap:8px}
+  .g-card .live::before{content:"";width:8px;height:8px;border-radius:50%;background:#1a7f37;animation:pulse 1.6s ease-in-out infinite}
+  @keyframes pulse{50%{opacity:.25}}
+  .g-card .skeleton{display:grid;gap:8px;margin:18px 0}
+  .g-card .skeleton i{display:block;height:10px;border-radius:6px;background:linear-gradient(90deg,#eee 0%,#f7f7f7 50%,#eee 100%);background-size:200% 100%;animation:shimmer 1.8s linear infinite}
+  .g-card .skeleton i:nth-child(2){width:86%}.g-card .skeleton i:nth-child(3){width:64%}
+  @keyframes shimmer{to{background-position:-200% 0}}
+
+  /* Contact */
+  .contact{background:var(--mint);border-radius:44px 44px 0 0;margin-top:40px}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+  .contact h2{font-size:clamp(56px,6.6vw,104px);letter-spacing:-.055em;line-height:.95}
+  .contact h2 em{color:var(--brown)}
+  .contact .intro{font-size:19px;color:var(--charcoal);margin:18px 0 36px;max-width:40ch}
+  .contact .quick{display:grid;gap:12px}
+  .contact .quick a{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.55);border-radius:18px;padding:18px 22px;font-weight:700;transition:background .25s}
+  .contact .quick a:hover{background:#fff}
+  .contact .quick small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--charcoal);font-weight:700}
+  form.enquiry{background:var(--paper);border-radius:var(--radius);padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:0 30px 60px -30px rgba(34,22,10,.35);align-self:start}
+  form.enquiry .full{grid-column:1/-1}
+  form.enquiry label{font-size:13px;font-weight:700;color:var(--charcoal);display:grid;gap:6px}
+  form.enquiry input,form.enquiry select,form.enquiry textarea{font:inherit;font-size:15px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;color:var(--ink);transition:border-color .2s, box-shadow .2s}
+  form.enquiry input:focus,form.enquiry select:focus,form.enquiry textarea:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 4px rgba(168,214,184,.6)}
+  form.enquiry textarea{min-height:120px;resize:vertical}
+  form.enquiry button{border:0;cursor:pointer;justify-self:start}
+  .thanks{display:none;grid-column:1/-1;background:var(--mint-soft);padding:14px 18px;border-radius:14px;font-weight:600}
+
+  /* Footer */
+  footer{background:var(--ink);color:#cec7bb;padding:90px 0 36px}
+  footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+  footer .brand{display:flex;align-items:center;gap:14px;color:var(--mint)}
+  footer .brand svg{width:60px;height:auto}
+  footer .brand b{color:#fff;font-size:26px;letter-spacing:-.03em;display:block;line-height:1}
+  footer .brand span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mint)}
+  footer p{font-size:15px;margin-top:18px;max-width:34ch}
+  footer h5{color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+  footer li{list-style:none;font-size:15px;margin-bottom:8px}
+  footer a:hover{color:var(--mint)}
+  .socials{display:flex;gap:10px;margin-top:22px}
+  .socials a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:.25s}
+  .socials a:hover{background:var(--mint);color:var(--ink);border-color:var(--mint)}
+  .footer-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;font-weight:600}
+  .footer-big{font-size:clamp(40px,7vw,104px);font-weight:800;letter-spacing:-.06em;line-height:1;color:#33241a;margin:60px 0 24px;padding:0 .15em .12em 0;white-space:nowrap}
+  .footer-big em{padding-right:.08em;color:var(--mint);opacity:.9}
+  .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#8f877b;border-top:1px solid rgba(255,255,255,.1);padding-top:26px}
+
+  .concept{position:fixed;left:16px;bottom:16px;z-index:60;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
+  .concept b{color:var(--mint)}
+
+  /* Reveal */
+  .js .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    .hero h1 em::after{transform:scaleX(1)}
+    .collage .a img{transform:none}
+  }
+
+  /* Responsive */
+  @media (max-width:1024px){
+    nav.main{gap:22px;font-size:14px}
+    .hero .wrap,.story .wrap,.care .wrap,.contact .wrap,.section-head,.reviews .panel{grid-template-columns:1fr}
+    .hero-media{max-width:560px}
+    .practices .grid{grid-template-columns:1fr 1fr}
+    .stats .wrap{grid-template-columns:1fr 1fr}
+    .stat:nth-child(3){border-left:0;padding-left:0}
+    .stat{border-top:1px solid rgba(255,255,255,.12)}
+    .care .media{position:relative;top:0;height:440px}
+    footer .grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:820px){
+    .topbar .phones span:nth-child(3){display:none}
+    nav.main{position:fixed;inset:70px 0 auto 0;background:var(--cream);flex-direction:column;align-items:flex-start;padding:24px;gap:18px;font-size:20px;border-bottom:1px solid var(--line);transform:translateY(-140%);visibility:hidden;transition:transform .4s cubic-bezier(.2,.8,.2,1),visibility 0s .4s;z-index:-1}
+    nav.main.open{transform:none;visibility:visible;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+    .menu-toggle{display:block}
+    header.site .wrap,header.site.scrolled .wrap{height:70px}
+    .logo svg{width:44px}
+    .logo b{font-size:23px}
+    .practices .grid{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 16px}
+    .pad{padding:84px 0}
+    .topbar .wrap{justify-content:center}
+    .topbar .phones{display:none}
+    .logo small{font-size:9px;letter-spacing:.12em}
+    .hero{padding:32px 0 88px}
+    .float-card{right:-4px;top:-14px;padding:12px 14px}
+    .float-card .num{font-size:26px}
+    .collage .label{font-size:11px;padding:5px 10px;left:8px;bottom:8px}
+    .collage .ph{border-radius:18px}
+    .collage .b,.collage .c{border-width:4px}
+    .badge{width:118px;height:118px;right:4px;bottom:-44px}
+    .badge .mk{width:52px}
+    .stat{padding:40px 16px}
+    .story .photo .tag{right:12px;bottom:-34px}
+    .care{margin:0;border-radius:32px}
+    .care .media{height:300px}
+    .gallery-track figure{width:240px;height:290px}
+    .gallery-track figure:nth-child(even){height:240px;margin-top:50px}
+    .practice .body{padding:26px}
+    .practice .actions .btn-ghost{padding:11px 14px}
+    .collage .b .label{top:8px}
+    .reviews .panel{padding:40px 24px;border-radius:32px}
+    .reviews .panel::after{display:none}
+    form.enquiry{grid-template-columns:1fr;padding:24px}
+    .contact{border-radius:32px 32px 0 0}
+    footer .grid{grid-template-columns:1fr}
+    .footer-big{white-space:normal;font-size:clamp(44px,14vw,64px)}
+    .footer-big em{display:block}
+  }
+</style>
+</head>
+<body>
+
+<!-- Eye mark, redrawn from the practices' logo -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 12 128 90">
+    <g fill="none" stroke="currentColor">
+      <path stroke-width="5.5" d="M5 57Q64 -8 123 57Q64 122 5 57Z"/>
+      <path stroke-width="6" d="M38 19H22V52M22 61V94H38M90 19H106V52M106 61V94H90"/>
+      <circle cx="64" cy="57" r="15.25" stroke-width="14.5"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="phones">
+      <span><b>Didsbury</b> &nbsp;<a href="tel:+441614457668">0161 445 7668</a></span>
+      <span><b>Stalybridge</b> &nbsp;<a href="tel:+441613382561">0161 338 2561</a></span>
+      <span><b>Alderley Edge</b> &nbsp;<a href="tel:+441625582030">01625 58 20 30</a></span>
+    </div>
+    <a href="#practices">Find your nearest practice &rarr;</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site" id="top">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Didsbury, Stalybridge and Alderley Eyecare home">
+      <svg viewBox="0 12 128 90" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="word"><small>Didsbury · Stalybridge · Alderley</small><b>Eye<em>care</em></b></span>
+    </a>
+    <nav class="main" id="nav">
+      <a class="link" href="#practices">Our practices</a>
+      <a class="link" href="#care">Eye care</a>
+      <a class="link" href="#frames">Frames &amp; lenses</a>
+      <a class="link" href="#story">About</a>
+      <a class="link" href="#contact">Contact</a>
+      <a class="btn btn-dark" href="#practices">Choose a practice
+        <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" id="menuBtn"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow reveal">Independent opticians · Manchester &amp; Cheshire</span>
+      <h1 class="reveal d1">Where clinical excellence meets <em>world‑leading</em> style.</h1>
+      <p class="lead reveal d2">Three independent practices in Didsbury, Stalybridge and Alderley Edge. Thorough eye examinations, honest advice and one of the most exciting spectacle and sunglass collections in the UK.</p>
+      <div class="ctas reveal d3">
+        <a class="btn btn-dark" href="#practices">Choose your practice
+          <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="btn btn-ghost" href="#care">Our eye care</a>
+      </div>
+      <div class="trust reveal d3">
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Carl Zeiss lenses</span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Specialist glazing laboratory</span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Children seen from age two</span>
+      </div>
+    </div>
+    <div class="hero-media reveal d2">
+      <div class="collage">
+        <a class="ph a" href="#didsbury"><img src="images/didsbury-interior.jpg" alt="Inside Didsbury Eyecare, with frame walls and red chairs" style="object-position:30% 50%"><span class="label">Didsbury</span></a>
+        <a class="ph b" href="#stalybridge"><img src="images/stalybridge-front.jpg" alt="The Stalybridge Eyecare shopfront seen through a pair of glasses" style="object-position:40% 50%"><span class="label">Stalybridge</span></a>
+        <a class="ph c" href="#alderley"><img src="images/alderley-front.jpg" alt="The Alderley Eyecare shopfront on London Road" style="object-position:20% 50%"><span class="label">Alderley Edge</span></a>
+        <div class="float-card">
+          <div class="num">20+</div>
+          <small>designer<br>frame labels</small>
+        </div>
+        <div class="badge" aria-hidden="true">
+          <svg class="ring" viewBox="0 0 150 150">
+            <defs><path id="circ" d="M75,75 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0"/></defs>
+            <g font-family="Manrope" font-size="11.5" font-weight="800" letter-spacing="2.2" fill="#D3EBDB" text-anchor="middle">
+              <text><textPath class="rw" href="#circ" startOffset="16%">DIDSBURY</textPath></text>
+              <text><textPath class="rw" href="#circ" startOffset="50%">STALYBRIDGE</textPath></text>
+              <text><textPath class="rw" href="#circ" startOffset="84%">ALDERLEY</textPath></text>
+              <text letter-spacing="0"><textPath class="rd" href="#circ" startOffset="1%">•</textPath></text>
+              <text letter-spacing="0"><textPath class="rd" href="#circ" startOffset="33%">•</textPath></text>
+              <text letter-spacing="0"><textPath class="rd" href="#circ" startOffset="67%">•</textPath></text>
+            </g>
+          </svg>
+          <svg class="mk" viewBox="0 12 128 90"><use href="#mark"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scrolling banner: designer brands -->
+<div class="marquee" aria-label="Designer brands stocked: Chanel, Tom Ford, Lindberg, Oliver Peoples, Moscot, Persol, Götti, Orgreen, Andy Wolf, Feb31st and Alain Mikli">
+  <div class="marquee-track" aria-hidden="true">
+    <div class="marquee-group">
+      <div class="marquee-item">Chanel <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Tom Ford</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Lindberg <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Oliver Peoples</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Moscot <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Persol</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Götti <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Orgreen</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Andy Wolf <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Feb31st</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Alain Mikli <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+    </div>
+    <div class="marquee-group">
+      <div class="marquee-item">Chanel <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Tom Ford</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Lindberg <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Oliver Peoples</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Moscot <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Persol</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Götti <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Orgreen</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Andy Wolf <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item"><em>Feb31st</em> <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+      <div class="marquee-item">Alain Mikli <svg class="star" viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="#533000"/></svg></div>
+    </div>
+  </div>
+</div>
+
+<!-- Practices -->
+<section class="practices pad" id="practices">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">Our practices</span>
+        <h2 class="reveal d1">Three practices. <em>Choose yours.</em></h2>
+      </div>
+      <p class="lead reveal d2">Each practice offers full optometric care and the same eye for frames. Pick the one nearest you to visit its own page, call the team or get directions.</p>
+    </div>
+    <div class="grid">
+      <article class="practice reveal" id="didsbury">
+        <a class="top" href="https://www.didsburyeyecare.co.uk/index.shtml"><img src="images/didsbury-interior.jpg" alt="Frame walls inside Didsbury Eyecare" style="object-position:88% 50%"><span class="num">01</span></a>
+        <div class="body">
+          <span class="city">Didsbury</span>
+          <h3>Didsbury <em>Eyecare</em></h3>
+          <div class="tags"><span>Head office</span><span>OCT imaging</span></div>
+          <div class="details">
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>717 Wilmslow Road, Didsbury<br>Manchester M20 6WF</span></div>
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+441614457668">0161 445 7668</a></div>
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:info@didsburyeyecare.co.uk">info@didsburyeyecare.co.uk</a></div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-dark" href="https://www.didsburyeyecare.co.uk/index.shtml">Visit practice<span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=717+Wilmslow+Road+Didsbury+Manchester+M20+6WF" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </article>
+      <article class="practice reveal d1" id="stalybridge">
+        <a class="top" href="https://www.didsburyeyecare.co.uk/stalybridge-eyecare/index.shtml"><img src="images/stalybridge-front.jpg" alt="The Stalybridge Eyecare shopfront on Melbourne Street, seen through a pair of glasses" style="object-position:42% 50%"><span class="num">02</span></a>
+        <div class="body">
+          <span class="city">Stalybridge</span>
+          <h3>Stalybridge <em>Eyecare</em></h3>
+          <div class="tags"><span>Eye examinations</span><span>Contact lens clinics</span></div>
+          <div class="details">
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>47 Melbourne Street<br>Stalybridge SK15 2JJ</span></div>
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+441613382561">0161 338 2561</a></div>
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:info@stalybridgeeyecare.co.uk">info@stalybridgeeyecare.co.uk</a></div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-dark" href="https://www.didsburyeyecare.co.uk/stalybridge-eyecare/index.shtml">Visit practice<span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=47+Melbourne+Street+Stalybridge+SK15+2JJ" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </article>
+      <article class="practice reveal d2" id="alderley">
+        <a class="top" href="https://www.didsburyeyecare.co.uk/alderley-eyecare/index.shtml"><img src="images/alderley-front.jpg" alt="The Alderley Eyecare shopfront on London Road, Alderley Edge" style="object-position:22% 50%"><span class="num">03</span></a>
+        <div class="body">
+          <span class="city">Alderley Edge</span>
+          <h3>Alderley <em>Eyecare</em></h3>
+          <div class="tags"><span>Eye examinations</span><span>Contact lens clinics</span></div>
+          <div class="details">
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>61 London Road, Alderley Edge<br>Cheshire SK9 7DY</span></div>
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+441625582030">01625 58 20 30</a></div>
+            <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><a href="mailto:info@alderleyeyecare.co.uk">info@alderleyeyecare.co.uk</a></div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-dark" href="https://www.didsburyeyecare.co.uk/alderley-eyecare/index.shtml">Visit practice<span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=61+London+Road+Alderley+Edge+SK9+7DY" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><div class="n"><span data-count="3">0</span></div><p>Independent practices across Manchester and Cheshire</p></div>
+    <div class="stat reveal d1"><div class="n"><span data-count="20">0</span><sup>+</sup></div><p>Designer frame labels, from Chanel to Lindberg</p></div>
+    <div class="stat reveal d2"><div class="n"><span data-count="2">0</span></div><p>Years old: the age we start seeing children for eye care</p></div>
+    <div class="stat reveal d3"><div class="n"><span data-count="100">0</span><sup>%</sup></div><p>Of our lenses come with scratch-resistant and anti-reflection coatings</p></div>
+  </div>
+</section>
+
+<!-- Eye care -->
+<section class="care pad" id="care" style="margin-top:120px">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow reveal">Eye care</span>
+      <h2 class="reveal d1">Clinical care <em>for every age.</em></h2>
+      <p class="lead reveal d2">An eye examination does far more than check your prescription. It can pick up early signs of glaucoma, retinal detachment and cataracts, and even general health problems such as diabetes and raised blood pressure.</p>
+      <div class="care-list">
+        <div class="care-row reveal">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div><h3>Eye examinations</h3><p>A full optometric service with fully qualified optometrists. Everyone over 40 should have regular checks, especially if a relative has glaucoma.</p></div>
+        </div>
+        <div class="care-row reveal d1">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5 21v-1a7 7 0 0 1 14 0v1"/></svg></div>
+          <div><h3>Children’s eye tests</h3><p>Designed to be fun and relaxed, with paediatric optometry from two years old. We advise a first eye examination at around three, and NHS eye tests are free for under-16s.</p></div>
+        </div>
+        <div class="care-row reveal d2">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6.5-8 11-8 11z"/><path d="M8 11h2l1.5-3 2 6 1.5-3H17"/></svg></div>
+          <div><h3>Medical eye care</h3><p>Cataract assessment and direct referral, glaucoma screening, ocular hypertension referral refinement and diabetic screening. <b>OCT imaging and interpretation at Didsbury.</b></p></div>
+        </div>
+        <div class="care-row reveal d3">
+          <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3.5 9.5c5 2 12 2 17 0"/></svg></div>
+          <div><h3>Contact lenses</h3><p>Full contact lens consultation clinics, with the latest contact lens products available.</p></div>
+        </div>
+      </div>
+      <div class="extras reveal"><span>Dyslexia &amp; tinted lenses</span><span>Low vision aids</span><span>Tear clinic</span><span>Repairs &amp; maintenance</span></div>
+      <div class="more reveal"><a class="btn btn-mint" href="https://www.didsburyeyecare.co.uk/services.shtml">All services<span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+    </div>
+    <div class="media reveal d1">
+      <img class="a" src="images/didsbury-lens.jpg" alt="Frame displays reflected in a pair of aviator sunglasses">
+      <img class="b" src="images/frames-wall.jpg" alt="Colourful frames on display in practice">
+    </div>
+  </div>
+</section>
+
+<!-- Frames & lenses -->
+<section class="pad" id="frames" style="padding-bottom:60px">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:48px">
+      <div>
+        <span class="eyebrow reveal">Frames &amp; lenses</span>
+        <h2 class="reveal d1">A sweet shop for <em>spectacle wearers.</em></h2>
+      </div>
+      <p class="lead reveal d2">Your glasses are often the first thing people notice, as much a part of how you look as your hair or your wardrobe. We stock budget to designer frames, Didsbury previews boutique and limited edition collections, and every lens is custom made with Carl Zeiss technology.</p>
+    </div>
+  </div>
+  <div class="gallery" aria-hidden="true">
+    <div class="gallery-track">
+      <figure><img src="images/didsbury-interior.jpg" alt="" style="object-position:12% 50%"></figure>
+      <figure><img src="images/frames-wall.jpg" alt="" style="object-position:72% 50%"></figure>
+      <figure><img src="images/didsbury-lens.jpg" alt="" style="object-position:60% 50%"></figure>
+      <figure><img src="images/didsbury-interior.jpg" alt="" style="object-position:70% 50%"></figure>
+      <figure><img src="images/frames-wall.jpg" alt="" style="object-position:22% 50%"></figure>
+      <figure><img src="images/didsbury-interior.jpg" alt="" style="object-position:100% 50%"></figure>
+      <figure><img src="images/didsbury-interior.jpg" alt="" style="object-position:12% 50%"></figure>
+      <figure><img src="images/frames-wall.jpg" alt="" style="object-position:72% 50%"></figure>
+      <figure><img src="images/didsbury-lens.jpg" alt="" style="object-position:60% 50%"></figure>
+      <figure><img src="images/didsbury-interior.jpg" alt="" style="object-position:70% 50%"></figure>
+      <figure><img src="images/frames-wall.jpg" alt="" style="object-position:22% 50%"></figure>
+      <figure><img src="images/didsbury-interior.jpg" alt="" style="object-position:100% 50%"></figure>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="cats reveal">
+      <a href="https://www.didsburyeyecare.co.uk/products.shtml">Women’s frames <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="https://www.didsburyeyecare.co.uk/products.shtml">Men’s frames <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="https://www.didsburyeyecare.co.uk/products.shtml">Children’s frames <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="https://www.didsburyeyecare.co.uk/products.shtml">Carl Zeiss lenses <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="https://www.didsburyeyecare.co.uk/brands.shtml">All brands <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- Story -->
+<section class="story pad" id="story">
+  <div class="wrap">
+    <div class="photo reveal">
+      <div class="main"><img src="images/childrens-test.jpg" alt="An optometrist talking two young children through their eye test"></div>
+      <div class="tag"><em>Honest advice</em> from start to finish, whatever your budget</div>
+    </div>
+    <div>
+      <span class="eyebrow reveal">About us</span>
+      <h2 class="reveal d1">Looking good, feeling happy, <em>seeing clearly.</em></h2>
+      <p class="reveal d2">It started with Didsbury Eyecare on Wilmslow Road. Owner and optometrist Gary Lesser has since opened Stalybridge Eyecare on Melbourne Street and Alderley Eyecare in the heart of Alderley village.</p>
+      <p class="reveal d2">Across all three, our fully qualified optometrists and experienced dispensing team share one aim: that you leave looking good, feeling happy and with perfect vision. Every member of staff is trained in dispensing, so you’ll get help finding a frame that suits your face, your lifestyle and your budget.</p>
+      <p class="reveal d3">Long-standing relationships with the best optical manufacturers give us access to most of the world’s finest frames, while our specialist glazing laboratory stocks an extensive range of lenses, including ultra-thin options for strong prescriptions.</p>
+      <div class="sig reveal d3">
+        <div class="mk"><svg viewBox="0 12 128 90"><use href="#mark"/></svg></div>
+        <div><b>Gary Lesser</b><span>Owner &amp; Optometrist</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="testimonials" style="padding:20px 0 120px">
+  <div class="wrap">
+    <div class="panel">
+      <div>
+        <span class="eyebrow reveal">Testimonials</span>
+        <h2 class="reveal d1">Kind words from <em>our patients.</em></h2>
+        <p class="lead reveal d2">Thorough eye tests, attention to detail and help choosing the right frames and lenses. Read what patients say about each of our practices.</p>
+        <div class="links reveal d3">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Didsbury+Eyecare+717+Wilmslow+Road+Manchester" target="_blank" rel="noopener">Didsbury reviews</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Stalybridge+Eyecare+47+Melbourne+Street+Stalybridge" target="_blank" rel="noopener">Stalybridge reviews</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Alderley+Eyecare+61+London+Road+Alderley+Edge" target="_blank" rel="noopener">Alderley reviews</a>
+        </div>
+      </div>
+      <div class="g-card reveal d2">
+        <div class="row">
+          <svg width="30" height="30" viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+          <span class="live">Live feed</span>
+        </div>
+        <div class="stars" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <div class="skeleton"><i></i><i></i><i></i></div>
+        <p>Your latest Google reviews appear here automatically, styled to match the site, for Didsbury, Stalybridge and Alderley Edge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact pad" id="contact">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow reveal">Get in touch</span>
+      <h2 class="reveal d1">Contact <em>us.</em></h2>
+      <p class="intro reveal d2">Call the practice nearest you to book an eye examination, or pop in and meet the team.</p>
+      <div class="quick reveal d3">
+        <a href="tel:+441614457668"><span><small>Didsbury</small>0161 445 7668</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:+441613382561"><span><small>Stalybridge</small>0161 338 2561</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:+441625582030"><span><small>Alderley Edge</small>01625 58 20 30</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <form class="enquiry reveal d2" id="enquiry">
+      <label>First name<input type="text" name="first" required></label>
+      <label>Last name<input type="text" name="last"></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Phone<input type="tel" name="phone"></label>
+      <label>Practice
+        <select name="practice"><option>Didsbury</option><option>Stalybridge</option><option>Alderley Edge</option></select>
+      </label>
+      <label>Enquiry
+        <select name="service"><option>Eye test</option><option>General enquiry</option></select>
+      </label>
+      <label class="full">How can we help?<textarea name="message"></textarea></label>
+      <button type="submit" class="btn btn-dark">Send message<span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      <div class="thanks" id="thanks">Thank you. The practice will be in touch shortly.</div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="brand"><svg viewBox="0 12 128 90" aria-hidden="true"><use href="#mark"/></svg><div><span>Didsbury · Stalybridge · Alderley</span><b>Eyecare</b></div></div>
+        <p>Independent opticians where clinical excellence meets world-leading style.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/pages/Didsbury-Eyecare/195053640566054/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
+        </div>
+        <div class="footer-links"><a href="https://www.didsburyeyecare.co.uk/aboutus.shtml">About</a><a href="https://www.didsburyeyecare.co.uk/services.shtml">Services</a><a href="https://www.didsburyeyecare.co.uk/brands.shtml">Brands</a><a href="https://www.didsburyeyecare.co.uk/contact.shtml">Contact</a></div>
+      </div>
+      <div>
+        <h5>Didsbury</h5>
+        <ul><li>717 Wilmslow Road</li><li>Didsbury, Manchester M20 6WF</li><li><a href="tel:+441614457668">0161 445 7668</a></li><li><a href="https://www.didsburyeyecare.co.uk/index.shtml">Visit practice page</a></li></ul>
+      </div>
+      <div>
+        <h5>Stalybridge</h5>
+        <ul><li>47 Melbourne Street</li><li>Stalybridge SK15 2JJ</li><li><a href="tel:+441613382561">0161 338 2561</a></li><li><a href="https://www.didsburyeyecare.co.uk/stalybridge-eyecare/index.shtml">Visit practice page</a></li></ul>
+      </div>
+      <div>
+        <h5>Alderley Edge</h5>
+        <ul><li>61 London Road</li><li>Alderley Edge, Cheshire SK9 7DY</li><li><a href="tel:+441625582030">01625 58 20 30</a></li><li><a href="https://www.didsburyeyecare.co.uk/alderley-eyecare/index.shtml">Visit practice page</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-big">Excellence, <em>in style.</em></div>
+    <div class="legal"><span>© 2026 Didsbury Eyecare, Stalybridge Eyecare &amp; Alderley Eyecare. All rights reserved.</span><span>Concept design by Spring View Marketing</span></div>
+  </div>
+</footer>
+
+<div class="concept"><b>Concept preview</b> · Spring View Marketing</div>
+
+<script>
+  // Sticky header state
+  const header = document.querySelector('header.site');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Mobile menu
+  const btn = document.getElementById('menuBtn'), nav = document.getElementById('nav');
+  btn.addEventListener('click', () => { const o = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', o); });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); btn.setAttribute('aria-expanded', false); }));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Count-up stats
+  const counters = new IntersectionObserver(entries => entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, end = +el.dataset.count, t0 = performance.now(), dur = 1400;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = end; counters.unobserve(el); return; }
+    const tick = t => { const p = Math.min((t - t0) / dur, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick); counters.unobserve(el);
+  }), {threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el => counters.observe(el));
+
+  // Badge: three place names spaced evenly round the ring, a dot in each gap
+  const placeRing = () => {
+    const C = document.getElementById('circ').getTotalLength();
+    const words = [...document.querySelectorAll('.badge .rw')], dots = [...document.querySelectorAll('.badge .rd')];
+    const L = words.map(w => w.getComputedTextLength());
+    const g = (C - L.reduce((a, b) => a + b, 0)) / words.length;
+    let pos = 6;
+    words.forEach((w, i) => {
+      dots[i].setAttribute('startOffset', pos);
+      w.setAttribute('startOffset', pos + g / 2 + L[i] / 2);
+      pos += g + L[i];
+    });
+  };
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(placeRing);
+
+  // Demo form
+  document.getElementById('enquiry').addEventListener('submit', e => { e.preventDefault(); document.getElementById('thanks').style.display = 'block'; e.target.reset(); });
+</script>
+</body>
+</html>

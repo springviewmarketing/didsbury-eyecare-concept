@@ -1,0 +1,9 @@
+# Only publish the images the page uses (originals stay local)
+images/*
+!images/didsbury-interior.jpg
+!images/didsbury-lens.jpg
+!images/frames-wall.jpg
+!images/childrens-test.jpg
+!images/stalybridge-front.jpg
+!images/alderley-front.jpg
+preview-*.png
